@@ -1,0 +1,17 @@
+#忽略.idea文件夹
+.idea/
+#忽略.vscode文件夹
+.vscode/
+#忽略data文件夹
+data/
+#忽略venv文件夹
+venv/
+logs/
+#忽略__pycache__文件夹
+**/__pycache__/
+#忽略pyc文件
+*.pyc
+#忽略package-lock.json文件
+package-lock.json
+#忽略package.json文件
+package.json
