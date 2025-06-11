@@ -1,29 +1,16 @@
-# frontend
+# 前端
 
-This template should help get you started developing with Vue 3 in Vite.
+本目录是基于 Vue3 + Vite 构建的界面，用于展示网络拓扑、流量曲线以及攻击日志。
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+## 运行
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
-
-```sh
+构建生产版本:
+```bash
 npm run build
 ```
+
+开发环境下会通过 `vite.config.js` 将 `/api` 请求代理到后端服务。

@@ -1,76 +1,15 @@
-# ZhiDa 脚手架
+# DL-SDN-Detect
 
-## 功能特性
+该项目提供一个基于深度学习的 SDN DDoS 攻击检测与防御原型。其中包含前端界面、FastAPI 后端服务以及 CNN-LSTM 模型训练脚本。
 
-- 🚀 FastAPI + MySQL 后端服务
-- 💡 Vue3 + Vite 前端框架
-- 🔗 配置好的数据库连接
-- 🌐 预置跨域通信支持
+## 目录结构
+- `frontend/`  前端 Vue3 + Vite 应用
+- `backend/`   FastAPI 后端，负责推理并与控制器交互
+- `CNN-LSTM/`  模型训练代码与权重文件
 
 ## 快速开始
+1. 按照各目录 README 安装依赖
+2. 启动后端：`uvicorn main:app --reload --port 8081`
+3. 启动前端：`npm install && npm run dev`
 
-### 1. 克隆仓库
-
-```bash
-git clone --branch scaffold --single-branch https://github.com/yang-kun-long/ZhiDa.git
-cd ZhiDa
-```
-
-### 2. 后端配置
-
-#### 2.1 后端安装依赖
-
-```bash
-# 进入后端目录
-cd backend
-
-# 创建虚拟环境（Windows）
-py -m venv venv
-venv\Scripts\activate
-
-# 安装依赖
-pip install -r requirements.txt
-```
-
-#### 2.2 配置数据库
-
-1. 修改配置文件 backend/config.py ：
-
-```python
-DB_CONFIG = {
-    "host": "localhost",
-    "user": "your_username",
-    "password": "your_password",
-    "database": "zhida_db",
-    "port": 3306
-}
-```
-
-1. 执行SQL初始化：
-
-```sql
-CREATE DATABASE zhida_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-CREATE USER 'your_username'@'localhost' IDENTIFIED BY 'your_password';
-GRANT ALL PRIVILEGES ON zhida_db.* TO 'your_username'@'localhost';
-FLUSH PRIVILEGES;
-```
-
-### 3. 前端配置
-
-```bash
-# 进入前端目录
-cd ../frontend
-
-# 安装依赖
-npm install
-
-# 启动开发服务器
-npm run dev
-```
-
-### 4. 启动服务
-
-服务|启动命令|访问地址
----|---|---
-后端api|uvicorn main:app --reload --port 8081|[http://localhost:8000](http://localhost:8000)
-前端|npm run dev|[http://localhost:5173](http://localhost:5173)
+详细使用说明请参阅对应目录下的 README。
